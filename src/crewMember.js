@@ -12,8 +12,10 @@ class CrewMember {
     }
 
     setsInvisibility() {
-      if (this.currentShip === 'Looking for a Rig') {
+      if (this.currentShip === 'Looking for a Rig' || this.position !== 'Defender' ) {
           return 'had no effect'
+      } else {
+        this.currentShip.cloaked = !this.currentShip.cloaked
       }
 
     }
